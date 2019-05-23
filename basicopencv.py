@@ -2,7 +2,7 @@ import numpy as np
 import cv2
 from matplotlib import pyplot as plt
 # Load an color image in grayscale
-img = cv2.imread('image/DSCF1957.JPG')
+img = cv2.imread('/home/hieu/Desktop/printword with python/IMG.JPG')
 name = "hinh anh"
 
 
@@ -48,12 +48,13 @@ plt.show()
 # blue = img[100,100,0] # Lay ra mau xanh cua toa do voi tham so (100,100,0) mau xanh la (100,100,1) , mau do (100,100,2)
 # print (blue)
 
-# # Chuyen doi rgb  
-# b,g,r = cv2.split(img)
-# img2 = cv2.merge([r,g,b])
-# plt.subplot(121);plt.imshow(img) 
-# plt.subplot(122);plt.imshow(img2)
-# plt.show()
+# Chuyen doi rgb  
+b,g,r = cv2.split(img)
+img2 = cv2.merge([r,g,b])
+img3 =cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
+plt.subplot(121);plt.imshow(img) 
+plt.subplot(122);plt.imshow(img3)
+plt.show()
 
 
 # thay doi kich thuoc hien thi
